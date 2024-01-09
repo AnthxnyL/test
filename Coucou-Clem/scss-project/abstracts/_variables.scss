@@ -1,0 +1,65 @@
+// Ce fichier est utilisé pour définir toutes les variables SCSS utilisées dans l'application.
+
+// Fonts
+@font-face {
+    font-family: 'Tondo Signage';
+    src: url(./fonts/Tondo-Signage.ttf);;
+}
+
+@font-face {
+    font-family: 'Urbarnist';
+    src: url(../fonts/Urbanist-Medium.ttf);
+}
+
+//Title
+$Font-title : 'Tondo Signage' , sans-serif;
+$h1 : 72px;
+$h2 : 48px;
+$h3 : 32px;
+$h4 : 20px;
+$body-large : 18px;
+$body : 16px;
+$body-small : 14px;
+
+
+//Body
+$Font-body : 'Urbarnist' , sans-serif;
+$h1 : 72px;
+$h4 : 20px;
+$body-large : 18px;
+$body : 16px;
+$body-small : 14px;
+
+//Line-height
+$line-height-h1 : 92px;
+$line-height-h2 : 64px;
+$line-height-h3 : 40px;
+$line-height-h4 : 32px;
+
+$line-height-body-large : 28px;
+$line-height-body : 24px;
+$line-height-body-small : 20px;
+
+
+//Font-weight
+$medium : 500;
+
+//Colors
+$white : #FFFFFF;
+$black-light : #313131;
+$black : #1F1F1F;
+$light-blue : #F7FAFE;
+$blue : #4356FF;
+$grey : #C7C7C7;
+$light-grey : #E7E7E7;
+$light-orange : #FD8F35;
+$orange : #E46902;
+$dark-orange : #E65808;
+
+//Spacing
+$gutter : 90px;
+$space20 : 20px;
+
+
+
+

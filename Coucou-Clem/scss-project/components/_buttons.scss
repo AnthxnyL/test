@@ -1,0 +1,138 @@
+%button-primary {
+    @extend %body-large;
+    padding: 10px 30px;
+    color: $white;
+    outline: none;
+    border: 1px solid $orange;
+    border-radius: 9px;
+    background-color: $orange;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+  
+    &:hover {
+      background-color: $white;
+      color: $orange;
+      border: 1px solid $orange;
+    }
+  
+    &:active {
+      background-color: $dark-orange;
+      color: $white;
+      border: 1px solid $dark-orange;
+    }
+  }
+  
+  %link {
+    @extend %body-large;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+  
+    &:hover {
+      color: $orange;
+    }
+  
+    &:active {
+      color: $dark-orange;
+    }
+  }
+  
+  
+  %button-secondary {
+    @extend %h4;
+    color: $white;
+    background-color: $orange;
+  
+    &:hover {
+      background-color: $dark-orange;
+      box-shadow: 0px 4px 20px 0px rgba(49, 49, 49, 0.15), 0px 4px 37px 0px rgba(228, 105, 2, 0.60);
+    }
+  }
+  
+  
+  %button-secondary-white {
+    @extend %button-secondary;
+    background-color: $light-blue;
+    color: $black;
+  }
+  
+  %button-secondary-white-hover {
+    @extend %button-secondary-white;
+    background-color: $white;
+    color: $orange;
+    box-shadow: 0px 4.29066px 62.21453px 0px rgba(247, 250, 254, 0.79), 0px 4.29066px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  %button-primary-circle {
+    background-color: $orange;
+    @include size (290px, 290px);
+    @include flex (center, center, column);
+    gap : 24px;
+    border-radius: 100%;
+    opacity: 0.8;
+  
+    &:hover {
+      box-shadow: 0px 4px 20px 0px rgba(49, 49, 49, 0.15), 0px 4px 37px 0px rgba(228, 105, 2, 0.60);
+      background-color: $orange;
+      animation: button-circle-animation 0.5s 1 forwards;
+      opacity: 1;
+      
+    }
+  }
+  
+  %button-secondary-circle {
+    @extend %button-primary-circle;
+    background-color: $light-blue;
+    opacity: 1;
+  
+    &:hover {
+      box-shadow: 0px 4.29066px 62.21453px 0px rgba(247, 250, 254, 0.79), 0px 4.29066px 32px 0px rgba(0, 0, 0, 0.15);
+      background-color: $white;
+        
+      }
+    }
+    
+  @keyframes button-circle-animation {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+  }
+  
+  //Page pack-3
+  
+  %card-hover {
+  
+    img {
+      animation: card-animation-picture 1s 1 forwards;
+    }
+  
+    p {
+      animation: card-animation-title 0.5s 1 forwards;
+    }
+  
+  }
+  
+  @keyframes card-animation-picture {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes card-animation-title {
+    0% {
+     color: $black;
+    }
+  
+    100% {
+      color: $orange;
+    }
+  }
+  
+  

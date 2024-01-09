@@ -1,0 +1,62 @@
+%h1{
+  font-family: $Font-title;
+  font-size: $h1;
+  line-height: $line-height-h1;
+}
+
+%h2{
+  font-family: $Font-title;
+  font-size: $h2;
+  line-height: $line-height-h2;
+}
+
+%h3 {
+  font-family: $Font-title;
+  font-size: $h3;
+  line-height: $line-height-h3;
+}
+
+%h4{
+  font-family: $Font-title;
+  font-size: $h4;
+  line-height: $line-height-h4;
+}
+
+%title-body-large{
+  font-family: $Font-title;
+  font-size: $body-large;
+  line-height: $line-height-body-large;
+}
+
+%title-body{
+  font-family: $Font-title;
+  font-size: $body;
+  line-height: $line-height-body;
+}
+
+%title-body-small{
+  font-family: $Font-title;
+  font-size: $body-small;
+  line-height: $line-height-body-small;
+}
+
+%body-large{
+  font-family: $Font-body;
+  font-size: $body-large;
+  font-weight: $medium;
+  line-height: $line-height-body-large;
+}
+
+%body{
+  font-family: $Font-body;
+  font-size: $body;
+  font-weight: $medium;
+  line-height: $line-height-body;
+}
+
+%body-small{
+  font-family: $Font-body;
+  font-size: $body-small;
+  font-weight: $medium;
+  line-height: $line-height-body-small;
+}

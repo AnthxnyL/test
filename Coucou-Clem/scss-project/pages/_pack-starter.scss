@@ -1,0 +1,1090 @@
+
+// SECTION 1
+
+.pack-starter-section-1 {
+    position: relative;
+    @include flex (center, center);
+    @include size (100%, auto);
+    
+    &__grid {
+        margin-top: 200px; 
+        padding : 0px 60px 0px 90px;
+        @include grid (1fr 1fr, auto, 30px);
+        @include size (100%, auto);
+
+        &__left {
+            z-index: 1;
+            @include flex (flex-start, flex-start, column);
+            gap : 20Px;
+            @include size (100%, auto);
+            max-width: 500px;
+
+
+            span {
+               @extend %body-large; 
+            }
+
+            h2 {
+                @extend %h2;
+            }
+
+            p {
+                @extend %body;
+            }
+
+            a {
+                margin-top: 10px;
+                @extend %button-primary;
+            }
+        }
+
+        &__right {
+            z-index: 1;
+            @include flex (center, flex-start);
+            @include size (100%, auto);
+
+            &__image {          
+                @include size (auto, 600px);
+                @include flex (center, center);
+
+                img {
+                    @include size (auto, 100%);
+                }
+            }
+        }
+    }
+
+    .wave {
+        @include size (100%, auto);
+        position : absolute;
+        bottom: 0;
+        z-index : 0;
+        
+    }
+}
+
+//RESPONSIVE SECTION 1
+
+@media screen and (min-width : 2000px) {
+    .pack-starter-section-1 {
+        &__grid {
+        padding : 0px 250px;
+        }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .pack-starter-section-1 {
+
+        &__grid {
+            margin-top: 250px;
+            padding : 0px 24px;
+            &__right {
+                &__image {
+                    @include size (auto, 450px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 900px) {
+    .pack-starter-section-1 {
+
+        &__grid {
+            margin-top: 200px;
+            &__right {
+                @include position (center, center);
+                @include size (100%, auto);
+                &__image {
+                    @include size (100%, auto);
+
+                    img {
+                        @include size (100%, auto);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .pack-starter-section-1 {
+        &__grid {
+            grid-template-columns: 1fr;
+
+            &__right {
+                &__image {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+// SECTION 2
+
+.pack-starter-section-2 {
+    @include size (100%, auto);
+    @include flex (center, center);
+    background-color: $light-blue;
+    margin-top: 0;
+
+
+    &__grid {
+        @include grid (1fr 1fr, auto, 50px);
+        @include size (100%, auto);
+        padding: 80px 90px;
+
+        &__left {
+            @include flex (center, flex-start, column);
+            gap : 24px;
+
+            h3 {
+                @extend %h3;
+            }
+
+            p {
+                @extend %body-large;
+            }
+
+        }
+
+        &__right {
+            @include flex (center, center, column);
+            @include size (100%, auto);
+            gap : 16px;
+            padding-top : 10px;
+
+            &__card {
+                padding: 30px 16px; 
+                @include size(427px, 88px);
+                border-radius: 9px;
+                box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+                @include flex (flex-start, center);
+                gap : 16px;
+
+                p{
+                    @extend %body-large;
+                    color: $black;
+                }
+    
+                .arrow {
+                    @include flex (center, center);
+                    @include size(30px, 30px);
+                    background-color: $orange;
+                    border-radius : 100%;
+
+                    svg {
+                        @include size(16px, auto);
+                    }
+                }
+            }
+
+            .pack-starter-section-2-card-1 {
+                align-self: flex-start;
+            }
+
+            .pack-starter-section-2-card-3 {
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+//RESPONSIVE SECTION 2
+
+@media screen and (min-width : 2000px) {
+    .pack-starter-section-2 {
+        &__grid {
+            padding : 80px 250px;
+        }
+    }  
+}
+
+@media screen and (max-width : 1024px) {
+    .pack-starter-section-2 {
+        &__grid {
+            padding : 80px 24px;
+
+            .pack-starter-section-2-card-1 {
+                align-self: center;
+            }
+            .pack-starter-section-2-card-3 {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .pack-starter-section-2 {
+        &__grid {
+            padding : 80px 24px;
+            grid-template-columns: 1fr;
+
+            &__right {
+                &__card {
+                    @include size(100%, 88px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .pack-starter-section-2 {
+        &__grid {
+
+            &__right {
+    
+                &__card {
+
+                    p {
+                        color : $orange;
+                    }
+                    .arrow {
+                       display: none;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+
+ // SECTION 3
+
+ .pack-starter-section-3 {
+    @include size (100%, auto);
+    @include flex (center, center);
+    background-color: $light-blue;
+
+    &__grid {
+        @include grid (1fr 1fr, auto, 50px);
+        @include size (100%, auto);
+        padding: 0 90px;
+
+        &__left {
+            @include flex (center, center);
+            @include size (100%, auto);
+
+            &__img {
+                @include flex (center, center);
+                @include size (auto, 500px);
+
+                img {
+                    @include size (auto, 100%);
+                }
+            }
+        }
+
+        &__right {
+            @include flex (center, flex-start, column);
+            @include size (100%, auto);
+            gap : 24px;
+
+            h3 {
+                @extend %h3;
+            }
+
+            p {
+                @extend %body-large;
+                max-width: 520px;
+            }
+
+            a {
+                @extend %button-primary;
+            }
+            
+        }   
+    }
+}
+
+// Responsive SECTION 3
+
+@media screen and (min-width : 2000px) {
+    .pack-starter-section-3 {
+        &__grid {
+            padding : 0 250px;
+    
+            &__left {
+                &__img {
+                    @include size (auto, 700px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1700px) {
+    .pack-starter-section-3 {
+        &__grid {
+
+            &__left {
+                &__img {
+                    @include size (auto, 600px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .pack-starter-section-3 {
+        &__grid {
+            padding : 0 24px 30px 24px;
+
+            &__left {
+                &__img {
+                    @include size (auto, 450px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .pack-starter-section-3 {
+        &__grid {
+            grid-template-columns: 1fr;
+            gap : 16px;
+            padding: 0 24px 80px 24px;;
+
+            &__left {
+                &__img {
+                    @include size (auto, 400px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 425px) {
+    .pack-starter-section-3 {
+        &__grid {
+            &__left {
+                &__img {
+                    @include size (auto, 300px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 350px) {
+    .pack-starter-section-3 {
+        &__grid {
+            gap : 8px;
+            &__left {
+                &__img {
+                    @include size (auto, 250px);
+                }
+            }
+        }
+    }
+}
+
+// SECTION 4
+
+.pack-starter-section-4 {
+    position: relative;
+    @include size (100%, auto);
+    @include flex (center, center);
+    
+    &__flex {
+        z-index: 1;
+        @include size (100%, auto);
+        @include flex (center, center, column);
+        gap : 30px;
+        padding : 60px 90px 0px 90px;
+
+        &__text {
+            @include size (100%, auto);
+            @include flex (center, center, column);
+            gap : 24px;
+
+            h3 {
+                @extend %h3;
+                max-width: 360px;
+                text-align: center;
+                color : $white;
+            }
+
+            p {
+                @extend %body-large;
+                color : $white;
+                text-align: center;
+                max-width: 520px;
+            }
+        }
+
+        &__cards {
+            @include size (100%, auto);
+            @include flex (space-between, center);
+            gap : 20px;
+
+            &__card {
+                @include size (300px, 230px);
+                @include grid (1fr 1fr, auto, 0);
+                border-radius: 9px;
+                background-color: $white;
+                box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+
+                &__description {
+                    @include size (100%, 100%);
+                    @include flex (center, flex-start, column);
+                    padding : 10px 8px;
+
+                    span {
+                        @extend %body-large;
+                        color: $black;
+                       font-weight: bold;
+                    }
+    
+                    p {
+                        @extend %body-large;
+                        color: $black;
+                        
+                    }
+
+                }
+
+                &__img {
+                    @include size (100%, 100%);
+                    border-radius: 9px 0px 0px 9px;         
+                }
+
+                .pack-starter-section-4-card-1__img {
+                    background: center / cover no-repeat url('./img/pack-starter/section-four.png');
+                }
+
+                .pack-starter-section-4-card-2__img {
+                    background: center / cover no-repeat url('./img/pack-starter/billet.png');
+                }
+
+                .pack-starter-section-4-card-3__img {
+                    background: center / cover no-repeat url('./img/pack-starter/femme_bureau.png');
+                }
+
+                .pack-starter-section-4-card-4__img {
+                    background: center / cover no-repeat url('./img/pack-starter/check.png');
+                }
+            }
+
+
+        }
+    }
+
+    &__background {
+        @include size (100%, 400px);
+        position : absolute;
+        top: 0;
+        z-index : 0;
+        background-color: $blue;
+    }
+}
+
+// Responsive SECTION 4
+
+@media screen and (min-width : 2000px) {
+    .pack-starter-section-4 {
+        &__flex {
+            padding : 60px 250px 0px 250px;
+
+            &__cards {
+                &__card {
+                    @include size (450px, 230px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 1024px) {
+    .pack-starter-section-4 {
+        &__flex {
+            padding : 60px 24px 0px 24px;
+
+            &__cards {
+                @include position (center, center);
+             
+            }
+
+            .pack-starter-section-4-card-4 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .pack-starter-section-4 {
+
+        .pack-starter-section-4-card-3 {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .pack-starter-section-4 {
+
+        .pack-starter-section-4-card-2 {
+            display: none;
+        }
+    }
+}
+
+// SECTION 5
+
+.pack-starter-section-5 {
+    margin-top: 120px;
+    @include size (100%, auto);
+    @include flex (center, center);
+    margin-bottom: 200px;
+
+    &__flex {
+        padding: 0 90px;
+        @include size (100%, auto);
+        @include flex (center, center, column);
+        gap : 38px;
+
+        &__text {
+            @include size (100%, auto);
+            @include flex (center, center, column);
+            gap : 24px;
+
+            h3 {
+                @extend %h3;
+            }
+
+            p {
+                @extend %body-large;
+                text-align: center;
+                max-width: 550px;
+            }
+        }
+
+        &__cards {
+            @include size (100%, auto);
+            @include flex (space-between, center);
+            gap : 20px;
+
+            .card-container {
+                @include flex (center, flex-start, column);
+                gap : 18px;
+
+                p {
+                    @extend %body-large;
+                    color: $black;
+                }
+            }
+
+            &__card {
+                border-radius: 9px;
+                background-color: $light-blue;
+                @include size (400px, 220px);
+                @include flex (center, center);
+                position: relative;
+                overflow: hidden;
+
+                &__content {
+                    padding: 25px 0 25px 17px;
+                    z-index: 1;
+                    @include size (100%, 100%);
+                    @include flex (space-between, flex-start, column);
+
+                    &__text {
+                        @include size (100%, auto);
+                        @include flex (flex-start, flex-start, column);
+        
+                        h4 {
+                            @extend %h4;
+                            color: $black;
+                        }
+        
+                        p {
+                            @extend %body;
+                            color: $black;
+                        }
+                    }
+
+                    &__logo {
+                        
+                        span {
+                            @extend %body;
+                            font-size : 12px;
+                            color: $orange;
+                        }
+                    }
+                }
+
+                &__img {
+                    @include size (auto, 100%);
+
+                    img {
+                        z-index : 0;
+                        position: absolute;
+                    }
+                }
+
+                .pack-starter-section-5-img-card-1 {
+                    img {
+                        right : 0;
+                        top : 15px;
+                    }
+                }
+              
+                .pack-starter-section-5-img-card-2 {
+                    img {
+                        left : 0;
+                    }
+                }
+                
+                .pack-starter-section-5-img-card-3 {
+                    img {
+                        right : 0;
+                        bottom : 0;
+                    }
+                }
+
+                .pack-starter-section-5-card-2{
+                    padding: 25px 17px 25px 0;
+                    &__text {
+
+                        h4 {
+                            @include size (100%, auto);
+                            text-align: right;
+                        }
+                        
+                        p {
+                            @include size (100%, auto);
+                            text-align: right;
+                        }
+                    }
+    
+                    &__logo {
+                        @include size (100%, auto);
+                        text-align: right;
+                    }
+                }
+
+                &__play {
+                    position: absolute;     
+                }
+            }
+        }
+
+        a {
+            @extend %button-primary;
+        }
+    }
+
+}
+
+// Responsive SECTION 5
+
+@media screen and (min-width : 2000px) {
+    .pack-starter-section-5 {
+        &__flex {
+            padding : 0 250px;
+
+            &__cards {
+                @include position (center, center);
+                &__card {
+                    @include size (500px, 220px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1800px) {
+    .pack-starter-section-5 {
+        &__flex {
+            &__cards {
+                @include position (center, center);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1400px) {
+    .pack-starter-section-5 {
+        &__flex {
+            padding : 0 24px;
+
+            &__cards {
+                @include position (center, center);
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 420px){
+    .pack-starter-section-5 {
+        &__flex {
+            &__cards {
+                &__card {
+                    @include size (100%, 220px);
+
+                    &__img {
+
+                        img {
+                            @include size (auto, 150px);
+                            bottom : 0;
+                        }
+                    }
+
+                    &__play {
+                        @include size (auto, 70px);
+                        bottom : 40px;
+
+                        svg {
+                            @include size (auto, 100%);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+// SECTION 6    
+
+.slider {
+    margin-top: 120px;
+    @include size (100%, auto);
+    @include grid(1fr 850px, auto, 30px);
+    @include position (center, center);
+    padding : 0 90px;
+
+    &__text{
+        @include flex (flex-start, flex-start, column);
+        gap : 24px;
+        max-width: 550px;
+
+        h3{
+            @extend %h3;
+        }
+
+        p{
+            @extend %body-large;
+        }
+
+        button {
+            @extend %button-primary;
+        }
+    }
+
+    .slide-container{
+        @include size (100%, auto);
+        padding: 10px;
+        margin-bottom: 100px;
+      
+        &__slide-content{  
+          border-radius: 9px; 
+          
+      
+          &__card-wrapper{
+            min-width: 1400px;
+      
+              .card1{
+                  background: url("./img/slider-content/img1.png") top center/ cover no-repeat;
+              }
+      
+              .card2{
+                  background: url("./img/slider-content/img2.png") top center/ cover no-repeat;
+              }
+      
+              .card3{
+                  background: url("./img/slider-content/img3.png") center/ cover no-repeat;
+              }
+              
+              &__card {
+                  border-radius: 9px;
+                  background-color: #FFF;
+                  @include size(430px, 400px);
+                  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+
+
+                  .card-content{
+                        @include flex (flex-end, flex-start, column);
+                        @include size(100%, 100%);
+                        border-radius: 9px;
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, #FFF 64.58%, #FFF 100%, #FFF 100%);
+                        gap : 10px;
+                        padding: 24px;
+      
+                        &__name {
+                            @extend %h4;
+                            font-size : 20px;
+                            color: $black;
+                            line-height: 24px;
+                        }
+        
+                        &__description {
+                                @extend %body-small;
+                        }
+                  }
+              }
+          }
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        .swiper-navBtn {
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            position : absolute;
+            z-index : 1;
+            background-color: white;
+            border-radius: 50%;
+            padding: 12px;
+            box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.15));
+        }
+
+        .swiper-next {
+            top : 50%;
+            left : 10px;
+            transform: translate(-50%, -50%);
+
+            svg {
+                height: 100%;
+                width: 100%;
+                transform: rotate(180deg);
+            }
+        }
+
+        .swiper-prev {
+            top : 50%;
+            right: -40px;
+            transform: translate(-50%, -50%);
+
+            svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+    } 
+}    
+
+@media screen and (min-width : 2000px) {
+    .slider {
+        padding : 0 250px;
+    }  
+}
+
+@media screen and (max-width : 1200px) {
+    .slider {
+        padding: 0 24px;
+       
+       .slide-container {
+           @include size (auto, 400px);
+           
+           &__slide-content {
+                
+                &__card-wrapper {
+                    min-width: 100%;
+                    @include flex (flex-start, center);
+                   
+
+                    &__card {
+                        @include size (300px,400px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1100px){
+    .slider {
+        grid-template-columns: 1fr;
+        
+        .slide-container {
+            @include size (800px, 250px);
+           
+
+            &__slide-content {
+                &__card-wrapper {
+                    min-width: 100%;
+                    @include flex (flex-start, center);
+                    gap : 10px;
+
+                    &__card {
+                        @include size (300px,250px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 830px) {
+    .slider {
+        .slide-container {
+            @include size (600px, 250px);
+
+            &__slide-content {
+                &__card-wrapper {
+                    min-width: 100%;
+                    @include flex (flex-start, center);
+                    gap : 10px;
+
+                    &__card {
+                        @include size (300px,250px);
+                    }
+                }
+            }
+        }
+
+        &__right {
+            .swiper-next {
+                left : 30px;
+            }
+    
+            .swiper-prev {
+                right: -20px;
+                top : 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .slider {
+
+        .slide-container {
+            @include size (300px, 250px);
+
+
+        }
+
+    }
+}
+
+
+// BOTTOM BUTTON 
+
+.pack-starter-bottom-button {
+    margin: 120px 0 240px 0;
+    @include size (100%, auto);
+    @include flex (center, center);
+    
+    &__container {
+        position: relative;
+        @include size (100%, auto);
+        @include flex (center, center);
+        gap : 24px;
+        max-width: 530px;
+
+        &__orange {
+            z-index: 1;
+            position: absolute;
+            left : 0;
+            @extend %button-primary-circle;
+
+            a {
+                text-decoration: none;
+                color: $white;
+                max-width: 140px;
+                text-align: center;
+
+                &:hover {
+                    color: $white;
+                }
+
+                &:active {
+                    color: $white;
+                }
+
+                h4 {
+                    @extend %h4;
+                }
+            }
+
+            svg {
+                transform: rotate(90deg);
+                @include size (24px, 24px);
+            }
+        }
+
+        &__white {
+            position: absolute;
+            right: 0;
+            @extend %button-secondary-circle;
+
+            a {
+                text-decoration: none;
+                color: $black;
+                max-width: 180px;
+                text-align: center;
+
+                &:hover {
+                    color: $black;
+                }
+
+                &:active {
+                    color: $black;
+                }
+
+                h4 {
+                    @extend %h4;
+                }
+            }
+
+            svg {
+                @include size (24px, 24px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 515px) {
+    .pack-starter-bottom-button {
+        padding : 0 24px;
+        margin-top: 80px;
+        &__container {
+
+            &__orange {
+                @include size (220px, 220px);
+            }
+
+            &__white {
+                @include size (220px, 220px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 430px){
+    .pack-starter-bottom-button {
+        &__container {
+           @include size (300px, 400px);
+
+            &__orange {
+               top : 0;
+               left : 50%;
+                transform: translate(-50%, 0);  
+            }
+
+            &__white {
+                bottom : 0;
+                right: 50%;
+                transform: translate(50%, 0);
+            }
+        }
+    }
+}

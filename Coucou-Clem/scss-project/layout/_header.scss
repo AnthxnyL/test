@@ -1,0 +1,156 @@
+.header {
+    @include size (100%, 120px);
+    background-color: $white;
+    padding: 36px 90px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    @include flex (center, center);
+    gap : 70px;
+    position: fixed;
+    z-index: 10;
+
+    &__logo {
+        @include size (auto, auto);
+        @include flex (flex-start, center);
+
+        p {
+           @extend %h3;
+            color: $orange;
+            min-width: 210px;
+        }
+    }
+
+    &__nav {
+        z-index: 5;
+        @include size (100%, 100%);
+        @include flex (space-between, center);
+        gap : 90px;
+
+
+        &__content {
+            @include size (100%, 100%);
+            @include flex (space-around, center);
+            gap : 20px;
+
+            a {
+                @extend %link;
+                color: $black;
+            }
+        }
+
+        &__buttons {
+            @include size (auto, 100%);
+            @include flex (space-between, center);
+            gap : 24px;
+
+            svg {
+                @include size (32px, 32px);
+                cursor: pointer;
+            }
+
+            a {
+                @extend %button-primary;
+                @include size (190px, auto);
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        cursor : pointer;
+    }
+
+}
+
+@media screen and (min-width : 2000px) {
+    .header {
+        padding : 36px 250px;
+    }
+}
+
+
+@media screen and (max-width : 1500px ) {
+    .header {
+        gap : 40px;
+
+        &__nav {
+            gap : 50px;
+            @include position (space-between, center);
+        }
+    }
+}
+
+@media screen and (max-width : 1400px) {
+    .header {
+        padding : 36px 24px;
+        gap :30px;
+
+        &__nav {
+            gap : 30px;
+        }
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .header {
+        flex-wrap: wrap;
+        @include size (100%, auto);
+        gap : 20px;
+    }
+}
+
+@media screen and (max-width : 1000px) {
+    .header {
+        flex-wrap: nowrap;
+        @include size (100%, 120px);
+        @include position (space-between, center);
+
+
+        .hamburger {
+            display: block;
+            @include size (60px, 48px);
+            padding: 8px;
+            border-radius: 40px;
+        }
+    
+        .hamburger .line {
+            @include size (28px, 3px);
+            background-color: $orange;
+            margin : 5px auto;
+        }
+
+        &__nav {
+            @include size (100%, 0px);
+            position : absolute;
+            top : 80px;
+            left : 0;
+            right: 0;
+            background-color: $white;
+            overflow: hidden;
+            @include flex (center, center, column);
+            box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+
+            &__content {
+                @include size (100%, auto);
+                @include flex (center, center, column);
+            }
+
+            &__buttons {
+                @include size (100%, auto);
+                @include flex (center, center, column);
+
+                svg {
+                    display: none;
+                }
+            }
+
+
+            &.active {
+                @include size (100%, auto);
+                opacity: 1;
+                padding : 30px 0;
+
+            }      
+        }
+    }
+}
+ 
